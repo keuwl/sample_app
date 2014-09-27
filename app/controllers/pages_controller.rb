@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   	@titre = "Aide"
   end
 
-  def signin
-  	@titre = "Login"
+  def new
+  	@titre = "Inscription"
   end
 end
