@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-	<title> Simple App | <%= @titre %></title>
-	<%= csrf_meta_tag %>
-</head>
-
-
+<%= render 'layouts/header' %>
 <body>
-
-<%= yield %>
+<div class="container">
+	<header>
+		<%= image_tag("logo.png", :alt => "Application exemple", :class => "round") %>
+		<nav class="round">
+			<ul>
+				<li><%= link_to "Accueil", '#' %></li>
+				<li><%= link_to "Aide", '#' %></li>
+				<li><%= link_to "Login", '#' %></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="round">
+		<%= yield %>
+	</section>
+	<%= render 'layouts/footer' %>
+</div>
 </body>
 
 </html>
